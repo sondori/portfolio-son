@@ -6,22 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/aos.css">
     <script src="js/jquery-3.6.0.js"></script>
+    <script src="js/aos.js"></script>
     <script src="js/index.js"></script>
 </head>
 <body>
     <div class="nav">
         <ul>
             <li><a href="#"><img src="images/new-logo.png" alt=""></a></li>
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">ABOUT</a></li>
-            <li><a href="#">WORK</a></li>
-            <li><a href="#">CONTACT</a></li>
+            <li><a href="#target1" class="scroll">HOME</a></li>
+            <li><a href="#target2" class="scroll">ABOUT</a></li>
+            <li><a href="#target3" class="scroll">WORK</a></li>
+            <li><a href="#target4" class="scroll">CONTACT</a></li>
         </ul>
         <div class="btn"></div>
     </div>
     <div class="main">
-        <div class="main-wrap">
+        <div id="target1" class="main-wrap">
             <div class="content">
                 <div class="title">
                     <h1>I'm <p>webpublisher</p> </h1>
@@ -34,45 +36,47 @@
         </div>
     </div>
     <div class="about">
-        <div class="about-wrap">
+        <div id="target2" class="about-wrap">
             <div class="about-content">
                 <div class="about-event">
                     <div class="txt">
-                        <p>1996.09.30</p>
-                        <p>손혜지</p>
+                        <p>생년월일 / 이름</p>
+                        <p>960930 / 손혜지</p>
                     </div>
-                    <div class="img">
+                    <div class="img" data-aos="fade-right" data-aos-delay="700">
                         <img src="images/about-1.png" alt="1">
                     </div>
                 </div>
                 <div class="about-event">
                     <div class="txt">
-                        <p>1996.09.30</p>
-                        <p>손혜지</p>
+                        <p>MBTI</p>
+                        <p>ENFP</p>
                     </div>
-                    <div class="img">
-                        <img src="images/about-1.png" alt="1">
-                    </div>
-                </div>
-                <div class="about-event">
-                    <div class="txt">
-                        <p>1996.09.30</p>
-                        <p>손혜지</p>
-                    </div>
-                    <div class="img">
-                        <img src="images/about-1.png" alt="1">
+                    <div class="img" data-aos="fade-right" data-aos-delay="900">
+                        <img src="images/about-2.png" alt="1">
                     </div>
                 </div>
                 <div class="about-event">
                     <div class="txt">
-                        <p>1996.09.30</p>
-                        <p>손혜지</p>
+                        <p>최종학력</p>
+                        <p>백석예술대학교</p>
+                        <p>실용음악과 졸업</p>
                     </div>
-                    <div class="img">
-                        <img src="images/about-1.png" alt="1">
+                    <div class="img" data-aos="fade-right" data-aos-delay="1100" >
+                        <img src="images/about-3.png" alt="1">
                     </div>
                 </div>
-                <div class="title">
+                <div class="about-event">
+                    <div class="txt">
+                        <p>수료내역</p>
+                        <p>그린컴퓨터아트학원</p>
+                        <p>웹디자인양성과정</p>
+                    </div>
+                    <div class="img" data-aos="fade-right" data-aos-delay="1300">
+                        <img src="images/about-4.png" alt="4">
+                    </div>
+                </div>
+                <div class="title" data-aos="fade-left" data-aos-delay="100">
                     <h1>ABOUT ME</h1>
                     <ul><li><a href="#">MORE</a></li></ul>
                 </div>
@@ -94,9 +98,60 @@
         </div>
     </div>
     <div class="skill">
-        <div class="title">
-            <h2>SKILL</h2>
+        <div class="skill-wrap">
+            <div class="title">
+                <h2>SKILL</h2>
+            </div>
+            <div class="skill-content">
+                <div class="skill-event" data-aos="flip-left" data-aos-delay="300">
+                    <img src="images/skill-1.png" alt="포토샵">
+                    <div class="txt">
+                        <h1>80%</h1>
+                        <p>펜툴어짜구</p>
+                    </div>
+                </div>
+                <div class="skill-event" data-aos="flip-left" data-aos-delay="600">
+                    <img src="images/skill-2.png" alt="일러스트">
+                    <div class="txt">
+                        <h1>80%</h1>
+                        <p>펜툴을 이용한 드로잉과</p>
+                        <p>다양한 결과물을 도출할 수 있습니다.</p>
+                    </div>
+                </div>
+                <div class="skill-event" data-aos="flip-left" data-aos-delay="900">
+                    <img src="images/skill-3.png" alt="일러스으">
+                    <div class="txt">
+                        <h1>80%</h1>
+                    </div>
+                </div>
+                <div class="skill-event" data-aos="flip-left" data-aos-delay="1200">
+                    <img src="images/skill-4.png" alt="일러스으">
+                    <div class="txt">
+                        <h1>80%</h1>
+                    </div>
+                </div>
+        </div>
         </div>
     </div>
+    </div>
+    <div id="target3" >
+        <div class="work" class="work-wrap">
+            <div class="title">
+                <h1>Work</h1>
+            </div>
+        </div>
+    </div>
+    <div id="target4" class="contact"></div>
+
+
+
+
+
+
+
+
+
+    <script>jQuery(document).ready(function($) {$(".scroll").click(function(event){ event.preventDefault();$('html,body').animate({scrollTop:$(this.hash).offset().top-100}, 500);});});</script>
+
 </body>
 </html>
