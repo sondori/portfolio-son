@@ -109,8 +109,8 @@ a{text-decoration: none; color: #000;}
 /* 모달창 설정부분 */
 .window{width: 100%; height: 100%; position: fixed; z-index: 9; background-color: rgba(0,0,0,0.2); top: 0; display: none;}
 
-.window-content{max-width: 1200px; height: 800px; background-color: #fff; position:fixed; z-index: 999; top: 30px; left: 15%; border-radius: 20px; display: none; overflow-y: scroll;}
-.window-close {width: 50px; height: 50px; position: fixed; z-index: 9999;top: 50px; right: 275px; background-color: #aaa; cursor: pointer;display: none;}
+.window-content{max-width: 1200px; height: 750px; background-color: #fff; position:fixed; z-index: 999; top: 30px; left: 15%; border-radius: 20px; display: none; overflow-y: scroll;}
+.window-close {width: 50px; height: 50px; position: fixed; z-index: 9999;top: 50px; right: 140px; background-color: #aaa; cursor: pointer;display: none;}
 .window-close:hover{background-color: #000; transition: .5s;}
 .window-close::before{content: ""; position: absolute; width: 5px; height: 50px; background-color: #fff; transform: rotate(-40deg);right: 25px; border-radius: 10px; cursor: pointer;}
 .window-close::after{content: ""; position: absolute; width: 5px; height: 50px; background-color: #fff; transform: rotate(40deg);right: 25px; border-radius: 10px;}
@@ -140,14 +140,17 @@ a{text-decoration: none; color: #000;}
 /* who am i */
 
 /* 1번 */
+.window-content .window-event{margin-bottom: 30px;}
 .window-content .window-event h1{color: #dae6ed; font-size: 50px; text-align: center;margin-top: 100px; }
 .window-content .window-event .event-img{margin-top: 100px;margin-left: 30px; display: flex; gap: 20px; justify-content: end; margin-right: 30px;}
-.window-content .window-event .event-img p{margin-right: 30px; font-size: 40px; color: rgb(99, 99, 99); margin-top: 100px; text-align: center; font-family: 'Cafe24Shiningstar'; font-size: 50px;}
+.window-content .window-event .event-img p{margin-right: 30px; font-size: 40px; color: rgb(99, 99, 99); margin-top: 100px; text-align: center; font-family: 'Cafe24Shiningstar'; font-size: 50px; }
 .window-content .window-event .bottom-txt{
-    text-align: center; margin-top: 50px; font-size: 15px;
+    text-align: center; margin-top: 50px; font-size: 25px;
 }
+.window-content .window-event .bottom-txt p{font-family: 'Cafe24Shiningstar';}
 
-
+.last-content{width: 100%; background-color: #dae6ed;}
+.last-content .last-txt{text-align: center; padding: 30px;}
 
 
 /* skill 부분 */
@@ -228,7 +231,9 @@ width: 2px; height: 20px; background-color: #aaa; right: -13px;}
 .contact .contact-content .ct-img img{width: 300px;}
 .contact .contact-content .ct-txt{text-align: center; margin-left: 150px;padding: 50px 80px; border: 1px solid #000; border-radius: 30px;}
 .contact .contact-content .ct-txt h3{font-size: 30px; letter-spacing: -1px; font-weight: 400;}
-
+.contact .contact-content .ct-txt .bottom{
+    margin-top: 300px;
+}
 
 
 
