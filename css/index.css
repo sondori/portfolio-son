@@ -6,16 +6,23 @@
 font-family: 'Noto Sans KR', sans-serif;
 }
 
+@font-face {
+    font-family: 'Cafe24Shiningstar';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Shiningstar.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 *{margin: 0; padding: 0; font-family: 'Noto Sans KR', sans-serif;}
 ul{list-style: none;}
 a{text-decoration: none; color: #000;}
 
 
 
-.nav{position: fixed; right: 0px; height: 100%;  background-color: #fff;text-align: center; border-left: 1px solid #000; padding: 250px 0; top: 0;padding-left: 10px; transition: .5s; z-index: 99999; }
-.nav.on{right: -85px;}
-.nav .btn{width: 30px; height: 100px; border: 1px solid #000; border-right: none; position: absolute; left: -32px; top: 35%; background-color: #fff;}
-.nav ul li{padding-bottom: 50px;cursor: pointer;z-index: 9999;}
+.nav{position: fixed; right: 0px; height: 100%;  background-color: #fff;text-align: center; border-left: 1px solid #000; padding: 130px 0; top: 0;padding-left: 3px; transition: .5s; z-index: 99999; }
+.nav.on{right: -83px;}
+.nav .btn{width: 30px; height: 100px; border: 1px solid #000; border-right: none; position: absolute; left: -32px; top: 30%; background-color: #fff;}
+.nav ul li{padding-bottom: 35px;cursor: pointer;z-index: 9999;}
 .nav ul li.on a{color: #aaa; position: relative;}
 /* .nav ul li.on a::after{content: "";} */
 .nav ul li:nth-child(1) a img{width: 50px; transition: all ease 1s;}
@@ -54,7 +61,7 @@ a{text-decoration: none; color: #000;}
 
 /* about 설정부분 */
 .about{width: 100%; margin-top: 300px;}
-.about .about-wrap {width: 100%; position: relative;}
+.about .about-wrap { position: relative;}
 .about .about-wrap::after{
     position: absolute;
     content: "";
@@ -66,9 +73,9 @@ a{text-decoration: none; color: #000;}
 }
 .about .about-wrap .about-content {
     width: 100%;
-    margin-left: 50px; 
+    margin-left: 5px; 
     display: flex; 
-    gap: 30px;
+    gap: 10px;
     width: 300px; height: 400px;
 }
 .about .about-content .about-event .txt{display: none;}
@@ -86,15 +93,15 @@ a{text-decoration: none; color: #000;}
 .about .about-wrap .about-content img.on{
     filter: grayscale(0);
 }
-.about .about-wrap .about-content p{text-align: center; background-color: rgba(0,0,0,0.2);}
+.about .about-wrap .about-content p{ width: 260px; text-align: center; background-color: rgba(0,0,0,0.2);}
 .about .about-content .about-event .txt{position: absolute; width: 300px;  z-index: 9; top: 200px;}
 .about .about-wrap .title{
-    margin-left: 100px;
-    margin-top: 130px;
+    margin-left: 10px;
+    margin-top: 120px;
     text-align: center;
 }
 .about .about-content .txt{color: #fff;}
-.about .about-content .txt p:nth-child(2){font-weight: bold; font-size: 30px;}
+.about .about-content .txt p:nth-child(2){font-weight: bold; font-size: 25px;}
 .about .about-wrap .title h1{ width: 300px; font-size: 50px;}
 .about .about-wrap .title ul li a{color: #fff; font-size: 30px;}
 
@@ -102,21 +109,21 @@ a{text-decoration: none; color: #000;}
 /* 모달창 설정부분 */
 .window{width: 100%; height: 100%; position: fixed; z-index: 9; background-color: rgba(0,0,0,0.2); top: 0; display: none;}
 
-.window-content{width: 1200px; height: 1050px; background-color: #fff; position:fixed; z-index: 999; top: 20px; left: 15%; border-radius: 20px;display: none; overflow-y: auto;}
-.window-close {width: 50px; height: 50px; position: fixed; z-index: 9999;top: 50px; right: 280px; background-color: #aaa; cursor: pointer;display: none;}
+.window-content{max-width: 1200px; height: 800px; background-color: #fff; position:fixed; z-index: 999; top: 30px; left: 15%; border-radius: 20px; display: none; overflow-y: scroll;}
+.window-close {width: 50px; height: 50px; position: fixed; z-index: 9999;top: 50px; right: 275px; background-color: #aaa; cursor: pointer;display: none;}
 .window-close:hover{background-color: #000; transition: .5s;}
 .window-close::before{content: ""; position: absolute; width: 5px; height: 50px; background-color: #fff; transform: rotate(-40deg);right: 25px; border-radius: 10px; cursor: pointer;}
 .window-close::after{content: ""; position: absolute; width: 5px; height: 50px; background-color: #fff; transform: rotate(40deg);right: 25px; border-radius: 10px;}
 
 .window-content .window-about{width: 100%; display: flex; justify-content: space-between;}
 .window-content .window-about .img img{width: 500px; margin-top: 50px; margin-right: 50px;}
-.window-content .window-about .title{margin-top: 150px;}
-.window-content .window-about .title h1{margin-left: 80px; margin-top: 50px; font-weight: 300; letter-spacing: -2px;}
-.window-content .window-about .title h1:nth-child(3){margin-left: 280px; margin-top: 50px;}
-.rolling{  max-width: 1000px; margin-top: 30px; height: 70px; overflow: hidden;}
+.window-content .window-about .title{margin-top: 180px;}
+.window-content .window-about .title h1{margin-left: 60px; margin-top: 50px; font-weight: 50; letter-spacing: -1px; font-size: 40px;  font-family: 'Cafe24Shiningstar'; color: rgb(99, 99, 99);}
+.window-content .window-about .title h1:nth-child(3){margin-left: 200px; margin-top: 50px; margin-right: 20px;}
+.rolling{  max-width: 1000px; margin-top: 30px; height: 70px; overflow: hidden; }
+/* 롤링 */
 .rolling ul{animation: up 10s infinite; display: flex; flex-direction: column; height: 70px;}
-.rolling ul li{height: 70px; line-height: 70px; padding-left: 20px; text-align: center; font-size: 50px; letter-spacing: -1px;}
-
+.rolling ul li{height: 70px; line-height: 70px; padding-left: 20px; text-align: center; font-size: 70px; letter-spacing: -1px; font-family: 'Cafe24Shiningstar'; color: #dae6ed;}
 @keyframes up {
     0% {transform: translateY(0);}
     10% {transform: translateY(0);}
@@ -129,6 +136,15 @@ a{text-decoration: none; color: #000;}
     80% {transform: translateY(-400%);}
     90% {transform: translateY(-400%);}
     100% {transform: translateY(-500%);}
+}
+/* who am i */
+
+/* 1번 */
+.window-content .window-event h1{color: #dae6ed; font-size: 50px; text-align: center;margin-top: 100px; }
+.window-content .window-event .event-img{margin-top: 100px;margin-left: 30px; display: flex; gap: 20px; justify-content: end; margin-right: 30px;}
+.window-content .window-event .event-img p{margin-right: 30px; font-size: 40px; color: rgb(99, 99, 99); margin-top: 100px; text-align: center; font-family: 'Cafe24Shiningstar'; font-size: 50px;}
+.window-content .window-event .bottom-txt{
+    text-align: center; margin-top: 50px; font-size: 15px;
 }
 
 
@@ -164,31 +180,56 @@ a{text-decoration: none; color: #000;}
 .work .work-menu ul li:not(:nth-last-child(1)):after{content: ""; position: absolute; top: 8px;
 width: 2px; height: 20px; background-color: #aaa; right: -13px;}
 .work .work-menu ul li a{color: #e1e1e1;}
+
 /* work-all 버튼설정 */
-.work .work-all .link-box ul{ display: flex; justify-content: center; gap: 15px; margin-top: 20px; margin-bottom: 50px; }
-.work .work-all .link-box ul li {font-size: 18px; border: 1px solid rgba(0,0,0,0.2); padding: 8px 25px; border-radius: 15px; cursor: pointer; display:block; transition: .5s; font-weight: 600;
-}
+.work .work-all .link-box ul{ display: flex; justify-content: center; gap: 5px; margin-top: 20px; margin-bottom: 50px; }
+.work .work-all .link-box ul li { border: 1px solid rgba(0,0,0,0.2);  border-radius: 15px; padding: 5px; cursor: pointer; display:block; transition: .5s; font-weight: 500;}
 .work .work-all .link-box ul li:hover{
     box-shadow: 0 80px 0 0  rgba(0,0,0,0.25) inset, 
-    0 -80px 0 0 rgba(0,0,0,0.25) inset;
-}
+    0 -80px 0 0 rgba(0,0,0,0.25) inset;}
 .work .work-all .link-box ul li:hover a{color: #fff;}
-.work .work-all .link-box ul li a{font-size: 20px;}
-.work .work-all .work-content {position: relative;}
-.work .work-all .work-content .work-txt{position: absolute; top: 250px; left: 170px; }
-.work .work-all .work-content img:hover{
-    opacity: 0.5;
+.work .work-all .link-box ul li a{font-size: 15px;}
+
+/* work -txt */
+.work .work-content .work-txt{ margin: 0 auto; width: 230px;background-color: #eeee;padding: 15px 5px; border-radius: 20px; text-align: center;}
+.work .work-content .work-txt p:nth-child(1){
+    font-weight: bold;
+    margin-bottom: 10px;
 }
+
+/*design-txt 설정 */
+.work .design-content .work-txt{ margin: 0 auto; width: 230px;background-color: #eeee;padding: 15px 5px; border-radius: 20px; text-align: center;}
+.work .design-content .work-txt p:nth-child(1){
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
 
 /* work - web&app 부분 */
-.work .work-all{display: flex; justify-content:center; margin-top: 100px; flex-wrap: wrap;}
+.work .work-all{margin-top: 100px; overflow: hidden; gap: 20px; justify-content: space-between; }
 
-.work .work-all .work-content{flex-basis: 45%; text-align: center; margin-bottom: 50px;}
-/* .work .work-all .work-content img{width: 80%; } */
+.work .work-all .work-content{ width: 250px; text-align: center; margin-bottom: 50px; }
+.work .work-all .work-content img{width: 100%;}
+
 /* work - design 부분 */
-.work .work-all{display: flex; justify-content: center;margin-top: 100px; gap: 5px;flex-wrap: wrap;}
+.work .work-all{ max-width:1200px; display: flex; margin-top: 100px; overflow: hidden; flex-basis: 25%; }
 
-.work .work-all .design-content{flex-basis: 45%; text-align: center;}
+.work .work-all .design-content{ width: 250px; text-align: center; margin-bottom: 50px; }
+.work .work-all .design-content img{width: 100%;}
+
+
+
+/* contact */
+
+.contact{width: 100%;}
+.contact-wrap{max-width: 1200px; margin: 0 auto;}
+.contact-wrap h2{text-align: center; font-size: 50px;}
+.contact .contact-content{display: flex; gap: 30px; margin-top: 50px; margin-bottom: 30px; }
+.contact .contact-content .ct-img img{width: 300px;}
+.contact .contact-content .ct-txt{text-align: center; margin-left: 150px;padding: 50px 80px; border: 1px solid #000; border-radius: 30px;}
+.contact .contact-content .ct-txt h3{font-size: 30px; letter-spacing: -1px; font-weight: 400;}
+
+
 
 
 

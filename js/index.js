@@ -107,6 +107,7 @@ skill("#ai" , 0.8)
 
 
 $(".work .work-all").hide().eq(0).show();
+$(".work .work-menu ul li").eq(0).addClass("on")
 $(".work .work-menu ul li").click(function(e){
     e.preventDefault();
     
