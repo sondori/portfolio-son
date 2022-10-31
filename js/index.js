@@ -44,17 +44,7 @@ $(document).ready(function(){
         $(".about .about-wrap .about-content img").removeClass("on")
     })
 
-    // $(window).scroll(function(){
 
-    //     let pos = $(".window-content").scrollTop()
-    //         // console.log($(".about-wrap").offset().top)
-    // console.log(pos)
-    //         if(pos >= $(".window-about .title").offset().top){
-    //             $(".window-content .window-about").show()
-    //         }
-    
-    
-    //     })
 
     $(".skill .skill-event img").mouseover(function(){
         let i = $(".skill-event img").index(this);

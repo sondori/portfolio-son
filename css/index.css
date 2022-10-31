@@ -19,7 +19,7 @@ a{text-decoration: none; color: #000;}
 
 
 
-.nav{position: fixed; right: 0px; height: 100%;  background-color: #fff;text-align: center; border-left: 1px solid #000; padding: 130px 0; top: 0;padding-left: 3px; transition: .5s; z-index: 99999; }
+.nav{position: fixed; right: 0px; height: 100%;  background-color: #fff;text-align: center; border-left: 1px solid #000; padding-top: 300px; top: 0;padding-left: 3px; transition: .5s; z-index: 99999; }
 .nav.on{right: -83px;}
 .nav .btn{width: 30px; height: 100px; border: 1px solid #000; border-right: none; position: absolute; left: -32px; top: 30%; background-color: #fff;}
 .nav ul li{padding-bottom: 35px;cursor: pointer;z-index: 9999;}
@@ -96,7 +96,7 @@ a{text-decoration: none; color: #000;}
 .about .about-wrap .about-content p{ width: 260px; text-align: center; background-color: rgba(0,0,0,0.2);}
 .about .about-content .about-event .txt{position: absolute; width: 300px;  z-index: 9; top: 200px;}
 .about .about-wrap .title{
-    margin-left: 10px;
+    padding-left: 500px;
     margin-top: 120px;
     text-align: center;
 }
@@ -109,11 +109,11 @@ a{text-decoration: none; color: #000;}
 /* 모달창 설정부분 */
 .window{width: 100%; height: 100%; position: fixed; z-index: 9; background-color: rgba(0,0,0,0.2); top: 0; display: none;}
 
-.window-content{max-width: 1200px; height: 750px; background-color: #fff; position:fixed; z-index: 999; top: 30px; left: 15%; border-radius: 20px; display: none; overflow-y: scroll;}
-.window-close {width: 50px; height: 50px; position: fixed; z-index: 9999;top: 50px; right: 140px; background-color: #aaa; cursor: pointer;display: none;}
+.window-content{max-width: 1200px; height: 900px; background-color: #fff; position:fixed; z-index: 999; top: 30px; transform: translateX(50%); border-radius: 20px; display: none; overflow-y: scroll;}
+/* .window-close {width: 50px; height: 50px; position: fixed; z-index: 9999;top: 50px; right: -10px; background-color: #aaa; cursor: pointer;display: none;}
 .window-close:hover{background-color: #000; transition: .5s;}
 .window-close::before{content: ""; position: absolute; width: 5px; height: 50px; background-color: #fff; transform: rotate(-40deg);right: 25px; border-radius: 10px; cursor: pointer;}
-.window-close::after{content: ""; position: absolute; width: 5px; height: 50px; background-color: #fff; transform: rotate(40deg);right: 25px; border-radius: 10px;}
+.window-close::after{content: ""; position: absolute; width: 5px; height: 50px; background-color: #fff; transform: rotate(40deg);right: 25px; border-radius: 10px;} */
 
 .window-content .window-about{width: 100%; display: flex; justify-content: space-between;}
 .window-content .window-about .img img{width: 500px; margin-top: 50px; margin-right: 50px;}
@@ -140,17 +140,18 @@ a{text-decoration: none; color: #000;}
 /* who am i */
 
 /* 1번 */
-.window-content .window-event{margin-bottom: 30px;}
+.window-content .window-event{margin-bottom: 30px; margin-top: 100px;}
 .window-content .window-event h1{color: #dae6ed; font-size: 50px; text-align: center;margin-top: 100px; }
 .window-content .window-event .event-img{margin-top: 100px;margin-left: 30px; display: flex; gap: 20px; justify-content: end; margin-right: 30px;}
 .window-content .window-event .event-img p{margin-right: 30px; font-size: 40px; color: rgb(99, 99, 99); margin-top: 100px; text-align: center; font-family: 'Cafe24Shiningstar'; font-size: 50px; }
 .window-content .window-event .bottom-txt{
-    text-align: center; margin-top: 50px; font-size: 25px;
+    text-align: center; margin-top: 50px; font-size: 25px; margin-bottom: 50px;
 }
 .window-content .window-event .bottom-txt p{font-family: 'Cafe24Shiningstar';}
 
-.last-content{width: 100%; background-color: #dae6ed;}
-.last-content .last-txt{text-align: center; padding: 30px;}
+.last-content{width: 100%; background-color: #dae6ed; margin-top: 70px;}
+.last-content .last-txt{text-align: center; padding: 30px; }
+.last-content .last-txt p{font-family: 'Cafe24Shiningstar'; font-size: 30px; }
 
 
 /* skill 부분 */
@@ -171,12 +172,12 @@ a{text-decoration: none; color: #000;}
 
 
 
-.work{width: 100%; margin-top: 200px; background-color:rgba(219, 219, 219, 0.2);}
+.work{width: 100%; margin-top: 300px; background-color:rgba(219, 219, 219, 0.2);}
 .work-wrap{max-width: 1200px; margin: 0 auto;}
 .work .work-title h1{text-align: center; font-size: 50px;}
 .work .work-all{max-width: 1200px; margin: 0 auto;}
 /* 메뉴텍스트부분 */
-.work .work-menu ul {display: flex; justify-content: center; gap: 30px; margin-top: 30px; font-size: 20px; }
+.work .work-menu ul {display: flex; justify-content: center; gap: 20px; margin-top: 30px; font-size: 20px; }
 .work .work-menu ul li{position: relative; }
 .work .work-menu ul li.on a{color: #000; transition: .5s;}
 .work .work-menu ul li a:hover{color: #000; transition: .5s;}
@@ -186,7 +187,7 @@ width: 2px; height: 20px; background-color: #aaa; right: -13px;}
 
 /* work-all 버튼설정 */
 .work .work-all .link-box ul{ display: flex; justify-content: center; gap: 5px; margin-top: 20px; margin-bottom: 50px; }
-.work .work-all .link-box ul li { border: 1px solid rgba(0,0,0,0.2);  border-radius: 15px; padding: 5px; cursor: pointer; display:block; transition: .5s; font-weight: 500;}
+.work .work-all .link-box ul li { border: 1px solid rgba(0,0,0,0.2);  border-radius: 15px; padding: 10px; cursor: pointer; display:block; transition: .5s; font-weight: 500;}
 .work .work-all .link-box ul li:hover{
     box-shadow: 0 80px 0 0  rgba(0,0,0,0.25) inset, 
     0 -80px 0 0 rgba(0,0,0,0.25) inset;}
@@ -209,7 +210,7 @@ width: 2px; height: 20px; background-color: #aaa; right: -13px;}
 
 
 /* work - web&app 부분 */
-.work .work-all{margin-top: 100px; overflow: hidden; gap: 20px; justify-content: space-between; }
+.work .work-all{margin-top: 100px; gap: 20px; justify-content: center; gap: 40px; }
 
 .work .work-all .work-content{ width: 250px; text-align: center; margin-bottom: 50px; }
 .work .work-all .work-content img{width: 100%;}
@@ -224,7 +225,7 @@ width: 2px; height: 20px; background-color: #aaa; right: -13px;}
 
 /* contact */
 
-.contact{width: 100%;}
+.contact{width: 100%; margin-top: 200px;}
 .contact-wrap{max-width: 1200px; margin: 0 auto;}
 .contact-wrap h2{text-align: center; font-size: 50px;}
 .contact .contact-content{display: flex; gap: 30px; margin-top: 50px; margin-bottom: 30px; }
