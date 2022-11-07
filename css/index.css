@@ -1,5 +1,11 @@
 @charset "utf-8";
 
+@font-face {
+    font-family: 'Cafe24ClassicType-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-2@1.0/Cafe24ClassicType-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
 @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
 
 .notosanskr * { 
@@ -13,15 +19,24 @@ font-family: 'Noto Sans KR', sans-serif;
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'NeoDunggeunmo';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.3/NeoDunggeunmo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 *{margin: 0; padding: 0; font-family: 'Noto Sans KR', sans-serif;}
 ul{list-style: none;}
 a{text-decoration: none; color: #000;}
 
 
 
-.nav{position: fixed; right: 0px; height: 100%;  background-color: #fff;text-align: center; border-left: 1px solid #000; padding-top: 300px; top: 0;padding-left: 3px; transition: .5s; z-index: 99999; }
+.nav{position: fixed; right: 0px; height: 100%;  background-color: #fff ;text-align: center; border-left: 8px double rgb(36, 36, 148); padding-top: 300px; top: 0;padding-left: 3px; transition: .5s; z-index: 99999; }
 .nav.on{right: -83px;}
-.nav .btn{width: 30px; height: 100px; border: 1px solid #000; border-right: none; position: absolute; left: -32px; top: 30%; background-color: #fff;}
+.nav .btn{width: 30px; height: 160px;  border-right: none; position: absolute; left: -38px; top: 30%; }
+.nav .btn p{ font-size: 30px; font-family: 'Cafe24ClassicType-Regular'; color: rgb(36, 36, 148); background-color: #fff;}
+.nav ul li a{font-family: 'Cafe24ClassicType-Regular'; color: #fff;}
 .nav ul li{padding-bottom: 35px;cursor: pointer;z-index: 9999;}
 .nav ul li.on a{color: #aaa; position: relative;}
 /* .nav ul li.on a::after{content: "";} */
@@ -33,9 +48,8 @@ a{text-decoration: none; color: #000;}
 }
 .main .main-wrap .content{max-width: 1200px; display: flex; margin-left: 200px; position: relative;}
 .main .main-wrap .content .title{margin-top: 250px; margin-right: 10px;}
-.main .main-wrap .content .title h1 p{margin-top: 2px; margin-left: 0px;font-size: 50px;}
-.main .main-wrap .content .title p{margin-top: 10px; margin-left: 60px;}
-/* .main .main-wrap .content .photo{width: 100%; height: auto; margin-left: 80px;} */
+.main .main-wrap .content .title h1{margin-top: 2px; margin-left: 0px;font-size: 80px; font-family: 'Cafe24ClassicType-Regular'; letter-spacing: 2px; font-weight: 300;}
+
 .main .main-wrap .content .photo img{
     width: 400px; 
     padding:100px 0; 
@@ -60,38 +74,60 @@ a{text-decoration: none; color: #000;}
 
 
 /* about 설정부분 */
-.about{width: 100%; margin-top: 300px;}
-.about .about-wrap { position: relative;}
-.about .about-wrap::after{
-    position: absolute;
-    content: "";
-    width: 100%; 
-    height: 250px; 
-    bottom: -30px;
-    background-color: #000;
-    z-index: -1;
-}
-.about .about-wrap .about-content {
-    width: 100%;
-    margin-left: 5px; 
-    display: flex; 
-    gap: 10px;
-    width: 300px; height: 400px;
-}
-.about .about-content .about-event .txt{display: none;}
-/* .about .about-content .about-event .txt.on{display: block} */
-.about .about-content .about-event .txt::after
+.about{width: 100%; margin-top: 200px; }
+.about .about-wrap { position: relative;  margin: 0 auto; z-index: 9; }
 
-.about .about-wrap .about-content .about-event .img{transition: .5s;}
+.rolling2{
+    width: 100%; margin: 0 auto;  overflow: hidden;
+    position: relative;}
+.rolling2 .rolling-wrap{ width: 200%; display: flex; animation: left 30s infinite linear;  top: 0px; position: absolute;}
+.rolling2 .rolling-wrap ul{display: flex; flex-shrink: 0;}
+.rolling2 .rolling-wrap ul li{font-size: 300px; padding: 0 40px;}
+.rolling2 .rolling-wrap ul li a{ font-family: 'Cafe24ClassicType-Regular';}
+.rolling2 .rolling-wrap ul li:nth-child(odd) a{color: rgb(36, 36, 148);}
+@keyframes left {
+    0% {transform: translateX(0);}
+    100% {transform: translateX(-65.3%);}
+    /* % 숫자 맞춰야댐 */
+}
+/* .about ul{position: relative;}
+.about ul{display: flex;   position: relative; z-index: -1; top: -50px;}
+.about ul li{color: #000; font-size: 50px;} */
+.about .about-wrap .about-content{
+    height: auto;
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    
+    /* width: 300px; height: 400px; */
+}
+/* .about .about-content .about-event .txt{display: none;} */
+/* .about .about-content .about-event .txt.on{display: block} */
+
+
+/* .about .about-wrap .about-content.img{width: 100%; transition: .5s;} */
+.about .about-wrap .about-content .about-content-wrap{
+    flex-basis: 70%;
+}
 .about .about-wrap .about-content img{
-    width: 250px;
     filter: grayscale(0.8);
     margin-bottom: 5px;
-    position: relative;
+    transition: .5s;
+    transform: rotate(10deg);
+    align-items: center;
+}
+.about .about-wrap .about-content img:nth-last-child(1){
+    align-items: center;
+}
+.about .about-wrap .about-content img:nth-child(odd){
+    transform: rotate(-10deg);
 }
 
 .about .about-wrap .about-content img.on{
     filter: grayscale(0);
+}
+.about .about-wrap .about-content img:hover{
+    transform: rotate(0deg);
 }
 .about .about-wrap .about-content p{ width: 260px; text-align: center; background-color: rgba(0,0,0,0.2);}
 .about .about-content .about-event .txt{position: absolute; width: 300px;  z-index: 9; top: 200px;}
@@ -100,12 +136,20 @@ a{text-decoration: none; color: #000;}
     margin-top: 120px;
     text-align: center;
 }
-.about .about-content .txt{color: #fff;}
-.about .about-content .txt p:nth-child(2){font-weight: bold; font-size: 25px;}
-.about .about-wrap .title h1{ width: 300px; font-size: 50px;}
-.about .about-wrap .title ul li a{color: #fff; font-size: 30px;}
 
+.about .about-content2{ max-width: 1200px; margin: 0 auto; text-align: center;}
 
+.about .about-content2 .txt{margin-top: 100px; margin-bottom: 20px; }
+.about .about-content2 .txt p{
+    font-size: 30px;
+    /* font-family: 'Cafe24ClassicType-Regular'; */
+    background-color: rgb(36, 36, 148);
+    color: #fff;
+    padding: 20px 0px;
+    border-radius: 30px;
+    font-family: 'NeoDunggeunmo';
+    border: 10px double #fff;
+}
 /* 모달창 설정부분 */
 .window{width: 100%; height: 100%; position: fixed; z-index: 9; background-color: rgba(0,0,0,0.2); top: 0; display: none;}
 
@@ -172,30 +216,32 @@ a{text-decoration: none; color: #000;}
 
 
 
-.work{width: 100%; margin-top: 300px; background-color:rgba(219, 219, 219, 0.2);}
+.work{width: 100%; margin-top: 300px; background-color: rgb(36, 36, 148); border-top: 10px double  rgb(36, 36, 148); border-bottom: 10px double  rgb(36, 36, 148);}
 .work-wrap{max-width: 1200px; margin: 0 auto;}
-.work .work-title h1{text-align: center; font-size: 50px;}
+.work .work-title {margin-top: 100px;}
+.work .work-title h1{text-align: center; font-size: 50px;     font-family: 'Cafe24ClassicType-Regular'; color: #fff;}
 .work .work-all{max-width: 1200px; margin: 0 auto;}
 /* 메뉴텍스트부분 */
 .work .work-menu ul {display: flex; justify-content: center; gap: 20px; margin-top: 30px; font-size: 20px; }
 .work .work-menu ul li{position: relative; }
-.work .work-menu ul li.on a{color: #000; transition: .5s;}
-.work .work-menu ul li a:hover{color: #000; transition: .5s;}
-.work .work-menu ul li:not(:nth-last-child(1)):after{content: ""; position: absolute; top: 8px;
+.work .work-menu ul li.on a{color:  rgb(108, 108, 192);  transition: .5s;}
+.work .work-menu ul li a:hover{color:  rgb(108, 108, 192); transition: .5s; font-size: 35px;}
+.work .work-menu ul li:not(:nth-last-child(1)):after{content: ""; position: absolute; top: 10px;
 width: 2px; height: 20px; background-color: #aaa; right: -13px;}
-.work .work-menu ul li a{color: #e1e1e1;}
+.work .work-menu ul li a{color: #e1e1e1; font-family: 'Cafe24ClassicType-Regular'; font-size: 25px; font-weight: 200;}
 
 /* work-all 버튼설정 */
-.work .work-all .link-box ul{ display: flex; justify-content: center; gap: 5px; margin-top: 20px; margin-bottom: 50px; }
-.work .work-all .link-box ul li { border: 1px solid rgba(0,0,0,0.2);  border-radius: 15px; padding: 10px; cursor: pointer; display:block; transition: .5s; font-weight: 500;}
-.work .work-all .link-box ul li:hover{
-    box-shadow: 0 80px 0 0  rgba(0,0,0,0.25) inset, 
-    0 -80px 0 0 rgba(0,0,0,0.25) inset;}
-.work .work-all .link-box ul li:hover a{color: #fff;}
-.work .work-all .link-box ul li a{font-size: 15px;}
+.work .work-all .link-box ul{ display: flex; gap: 5px; margin-top: 20px; margin-bottom: 50px;  flex-wrap: wrap; justify-content: center; }
+.work .work-all .link-box ul li { padding: 10px 20px; cursor: pointer; display:block;  font-weight: 500; font-weight: 50%; border-radius: 10%;}
+.work .work-all .link-box ul li:last-child{width: 100%;}
+/* .work .work-all .link-box ul li:hover{
+    /* box-shadow: 0 80px 0 0  rgba(10, 22, 132, 0.25) inset, 
+    0 -80px 0 0 rgba(0,0,0,0.25) inset; */
+.work .work-all .link-box ul li:hover a{color: rgb(108, 108, 192);}
+.work .work-all .link-box ul li a{font-size: 30px;font-family: 'NeoDunggeunmo'; transition: .5s; color: #fff; cursor: pointer;}
 
 /* work -txt */
-.work .work-content .work-txt{ margin: 0 auto; width: 230px;background-color: #eeee;padding: 15px 5px; border-radius: 20px; text-align: center;}
+.work .work-content .work-txt{ margin: 0 auto; width: 230px;background-color: #fff;padding: 15px 5px;  text-align: center;}
 .work .work-content .work-txt p:nth-child(1){
     font-weight: bold;
     margin-bottom: 10px;

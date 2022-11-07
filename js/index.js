@@ -3,9 +3,18 @@ $(document).ready(function(){
 
     AOS.init()
 
+
+
+
+
+
     $(".nav ul li").mouseover(function(){
         let i = $(this).index();
         $(".nav ul li").removeClass("on").eq(i).addClass("on")
+    })
+    $(".nav ul li").mouseout(function(){
+        let i = $(this).index();
+        $(".nav ul li").removeClass("on")
     })
 
 
@@ -33,14 +42,15 @@ $(document).ready(function(){
         $(".nav").toggleClass("on")
     })
 
+    $(".about .about-content2 .txt").hide()
     $(".about .about-content img").mouseover(function(){
         let i = $(".about .about-content img").index(this);
-        $(".about .about-content .about-event .txt").hide().eq(i).show("on")
+        $(".about .about-content2 .txt").slideUp().eq(i).slideDown("on")
         $(".about .about-wrap .about-content img").removeClass("on").eq(i).addClass("on")
     })
     $(".about .about-content").mouseout(function(){
         let i = $(".about .about-content img").index(this);
-        $(".about .about-content .about-event .txt").hide()
+        $(".about .about-content2 .txt").hide()
         $(".about .about-wrap .about-content img").removeClass("on")
     })
 
