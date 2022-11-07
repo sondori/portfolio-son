@@ -82,7 +82,7 @@ a{text-decoration: none; color: #000;}
     position: relative;}
 .rolling2 .rolling-wrap{ width: 200%; display: flex; animation: left 30s infinite linear;  top: 0px; position: absolute;}
 .rolling2 .rolling-wrap ul{display: flex; flex-shrink: 0;}
-.rolling2 .rolling-wrap ul li{font-size: 300px; padding: 0 40px;}
+.rolling2 .rolling-wrap ul li{font-size: 100px; padding: 0 40px;}
 .rolling2 .rolling-wrap ul li a{ font-family: 'Cafe24ClassicType-Regular';}
 .rolling2 .rolling-wrap ul li:nth-child(odd) a{color: rgb(36, 36, 148);}
 @keyframes left {
