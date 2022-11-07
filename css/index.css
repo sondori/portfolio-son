@@ -97,7 +97,6 @@ a{text-decoration: none; color: #000;}
     height: auto;
     display: flex;
     justify-content: center;
-    gap: 80px;
     
     /* width: 300px; height: 400px; */
 }
@@ -113,6 +112,7 @@ a{text-decoration: none; color: #000;}
     transition: .5s;
     transform: rotate(10deg);
     align-items: center;
+    margin-right: 30px;
 }
 .about .about-wrap .about-content img:nth-last-child(1){
     align-items: center;
