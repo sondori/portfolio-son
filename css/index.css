@@ -226,9 +226,9 @@ a{text-decoration: none; color: #000;}
 }
 
 
-.last-content{width: 100%; background-color: #dae6ed; margin-top: 70px;}
-.last-content .last-txt{text-align: center; padding: 30px; }
-.last-content .last-txt p{font-family: 'Cafe24Shiningstar'; font-size: 30px; }
+.last-content{width: 100%; background-color: rgb(36, 36, 148); margin-top: 70px;}
+.last-content .last-txt{text-align: center; padding : 90px 0; border-top: 10px double #fff;}
+.last-content .last-txt p{ font-size: 20px; color: #fff; font-family: 'NeoDunggeunmo'; margin-bottom: 15px; }
 
 
 /* skill 부분 */
