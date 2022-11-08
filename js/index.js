@@ -18,7 +18,7 @@ $(document).ready(function(){
     })
 
 
-    $(".about .title ul li a").click(function(e){
+    $(".about .title span").click(function(e){
         e.preventDefault();
 
         $(".window").slideDown();
@@ -26,11 +26,6 @@ $(document).ready(function(){
         $(".window-content .window-close").show();
     })
 
-    $(".window-content .window-close").click(function(){
-        $(".window").slideUp();
-        $(".window-content").slideUp();
-        $(".window-content .window-close").hide();
-    })
     $(".window").click(function(){
         $(".window").slideUp();
         $(".window-content").slideUp();
@@ -76,10 +71,14 @@ $(document).ready(function(){
     let pos = $(window).scrollTop()
         // console.log($(".about-wrap").offset().top)
 
-        if(pos >= $(".about-wrap").offset().top-800){
+        if(pos >= $(".about-wrap").offset().top-1000){
             $(".about-wrap .about-content img").show()
         }else{
             $(".about-wrap .about-content img").hide()
+        }
+
+        if(pos >= $(".skill").offset().top-1000000){
+            $(".skill .skill-wrap").show()
         }
 
 
@@ -90,7 +89,7 @@ $(document).ready(function(){
         let bar = new ProgressBar.Line(id,{
             strokeWidth :3,
             trailWidth: 3,
-            color: "#000",
+            color: "#e1e1e1",
             duration: 5000,
             step: function(state,circle){
                 circle.setText(Math.round(circle.value()*100)+"%")

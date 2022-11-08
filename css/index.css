@@ -32,11 +32,11 @@ a{text-decoration: none; color: #000;}
 
 
 
-.nav{position: fixed; right: 0px; height: 100%;  background-color: #fff ;text-align: center; border-left: 8px double rgb(36, 36, 148); padding-top: 300px; top: 0;padding-left: 3px; transition: .5s; z-index: 99999; }
+.nav{position: fixed; right: 0px; height: 100%;  background-color: #fff ;text-align: center; border-left: 8px solid rgb(36, 36, 148); padding-top: 300px; top: 0;padding-left: 3px; transition: .5s; z-index: 99999; }
 .nav.on{right: -83px;}
 .nav .btn{width: 30px; height: 160px;  border-right: none; position: absolute; left: -38px; top: 30%; }
-.nav .btn p{ font-size: 30px; font-family: 'Cafe24ClassicType-Regular'; color: rgb(36, 36, 148); background-color: #fff;}
-.nav ul li a{font-family: 'Cafe24ClassicType-Regular'; color: #fff;}
+.nav .btn p{ font-size: 15px; font-family: 'Cafe24ClassicType-Regular'; color: rgb(36, 36, 148); background-color: #fff;}
+.nav ul li a{font-family: 'Cafe24ClassicType-Regular'; color: rgb(36, 36, 148);}
 .nav ul li{padding-bottom: 35px;cursor: pointer;z-index: 9999;}
 .nav ul li.on a{color: #aaa; position: relative;}
 /* .nav ul li.on a::after{content: "";} */
@@ -48,7 +48,7 @@ a{text-decoration: none; color: #000;}
 }
 .main .main-wrap .content{max-width: 1200px; display: flex; margin-left: 200px; position: relative;}
 .main .main-wrap .content .title{margin-top: 250px; margin-right: 10px;}
-.main .main-wrap .content .title h1{margin-top: 2px; margin-left: 0px;font-size: 80px; font-family: 'Cafe24ClassicType-Regular'; letter-spacing: 2px; font-weight: 300;}
+/* .main .main-wrap .content .title h1{margin-top: 2px; margin-left: 0px;font-size: 80px; font-family: 'Cafe24ClassicType-Regular'; letter-spacing: 2px; font-weight: 300;}
 
 .main .main-wrap .content .photo img{
     width: 400px; 
@@ -70,19 +70,41 @@ a{text-decoration: none; color: #000;}
 
     animation:  6s linear infinite;
     transform-origin: 50% 50%;
-}
+} */
 
 
 /* about 설정부분 */
-.about{width: 100%; margin-top: 200px; }
-.about .about-wrap { position: relative;  margin: 0 auto; z-index: 9; }
+.about{width: 100%; margin-top: 100px; }
+.about .title{max-width: 1200px; margin: 0 auto; text-align: center; margin-bottom: 50px; }
+.about .title h2{font-size: 80px; margin-bottom: 20px; color: #e1e1e1;     font-family: 'Cafe24ClassicType-Regular';}
+.about .title p{font-size: 20px; margin-bottom: 30px;  font-family: 'NeoDunggeunmo';}
+.about .title span{font-size: 30px;  font-family: 'NeoDunggeunmo'; padding: 5px 30px; cursor: pointer; border: 1px solid rgb(36, 36, 148); color: #fff; 
+    background: linear-gradient(
+        45deg,
+        rgba(187, 10, 196, 1) 13%,
+        rgba(18, 12, 125, 1) 91%
+    );
+    background-blend-mode: normal;
+    transition: 1s;
+    border-radius: 30px;
+}
+.about .title span:hover{ 
+    background: linear-gradient(
+    45deg,
+    rgba(18, 12, 125, 1) 12%,
+    rgba(187, 10, 196, 1) 84%
+    );
+    background-blend-mode: normal;
+
+}
+
 
 .rolling2{
-    width: 100%; margin: 0 auto;  overflow: hidden;
-    position: relative;}
-.rolling2 .rolling-wrap{ width: 200%; display: flex; animation: left 30s infinite linear;  top: 0px; position: absolute;}
+    width: 100%; height: 670px; margin: 0 auto;  overflow: hidden;
+    position: relative; background-color: #f6f1f1;}
+.rolling2 .rolling-wrap{ width: 200%; display: flex; animation: left 30s infinite linear;  top: 200px; position: absolute; }
 .rolling2 .rolling-wrap ul{display: flex; flex-shrink: 0;}
-.rolling2 .rolling-wrap ul li{font-size: 50px; padding: 0 40px;}
+.rolling2 .rolling-wrap ul li{font-size: 65px; padding: 0 40px;}
 .rolling2 .rolling-wrap ul li a{ font-family: 'Cafe24ClassicType-Regular';}
 .rolling2 .rolling-wrap ul li:nth-child(odd) a{color: rgb(36, 36, 148);}
 @keyframes left {
@@ -107,15 +129,13 @@ a{text-decoration: none; color: #000;}
 /* .about .about-wrap .about-content.img{width: 100%; transition: .5s;} */
 
 .about .about-wrap .about-content img{
+    margin-top: 80px;
     filter: grayscale(0.8);
     margin-bottom: 5px;
     transition: .5s;
     transform: rotate(10deg);
     align-items: center;
     margin-right: 30px;
-}
-.about .about-wrap .about-content img:nth-last-child(1){
-    align-items: center;
 }
 .about .about-wrap .about-content img:nth-child(odd){
     transform: rotate(-10deg);
@@ -151,21 +171,17 @@ a{text-decoration: none; color: #000;}
 /* 모달창 설정부분 */
 .window{width: 100%; height: 100%; position: fixed; z-index: 9; background-color: rgba(0,0,0,0.2); top: 0; display: none;}
 
-.window-content{max-width: 1200px; height: 900px; background-color: #fff; position:fixed; z-index: 999; top: 30px; transform: translateX(50%); border-radius: 20px; display: none; overflow-y: scroll;}
-/* .window-close {width: 50px; height: 50px; position: fixed; z-index: 9999;top: 50px; right: -10px; background-color: #aaa; cursor: pointer;display: none;}
-.window-close:hover{background-color: #000; transition: .5s;}
-.window-close::before{content: ""; position: absolute; width: 5px; height: 50px; background-color: #fff; transform: rotate(-40deg);right: 25px; border-radius: 10px; cursor: pointer;}
-.window-close::after{content: ""; position: absolute; width: 5px; height: 50px; background-color: #fff; transform: rotate(40deg);right: 25px; border-radius: 10px;} */
+.window-content{width: 1400px; height: 100%; background-color: #fff; position:fixed; z-index: 999; top: 30px; transform: translateX(20%); border-radius: 20px; display: none; overflow-y: scroll;}
 
-.window-content .window-about{width: 100%; display: flex; justify-content: space-between;}
-.window-content .window-about .img img{width: 500px; margin-top: 50px; margin-right: 50px;}
-.window-content .window-about .title{margin-top: 180px;}
-.window-content .window-about .title h1{margin-left: 60px; margin-top: 50px; font-weight: 50; letter-spacing: -1px; font-size: 40px;  font-family: 'Cafe24Shiningstar'; color: rgb(99, 99, 99);}
-.window-content .window-about .title h1:nth-child(3){margin-left: 200px; margin-top: 50px; margin-right: 20px;}
+
+.window-content .window-about{width: 100%; display: flex; justify-content: space-between; background-color: rgb(36, 36, 148); border-top: 10px double #fff; border-bottom: 10px double #fff;}
+.window-content .window-about .title{margin-top: 50px; }
+.window-content .window-about .title h1{ margin-top: 50px; font-weight: 50; letter-spacing: -1px; font-size: 30px;  font-family: 'NeoDunggeunmo';color: #e1e1e1; text-align: center;}
+.window-content .window-about .title h1:nth-child(3){ margin-top: 50px;}
 .rolling{  max-width: 1000px; margin-top: 30px; height: 70px; overflow: hidden; }
 /* 롤링 */
 .rolling ul{animation: up 10s infinite; display: flex; flex-direction: column; height: 70px;}
-.rolling ul li{height: 70px; line-height: 70px; padding-left: 20px; text-align: center; font-size: 70px; letter-spacing: -1px; font-family: 'Cafe24Shiningstar'; color: #dae6ed;}
+.rolling ul li{height: 70px; line-height: 70px; padding-left: 20px; text-align: center; font-size: 50px; letter-spacing: -1px; font-family: 'Cafe24ClassicType-Regular'; color: #fff}
 @keyframes up {
     0% {transform: translateY(0);}
     10% {transform: translateY(0);}
@@ -183,13 +199,32 @@ a{text-decoration: none; color: #000;}
 
 /* 1번 */
 .window-content .window-event{margin-bottom: 30px; margin-top: 100px;}
-.window-content .window-event h1{color: #dae6ed; font-size: 50px; text-align: center;margin-top: 100px; }
-.window-content .window-event .event-img{margin-top: 100px;margin-left: 30px; display: flex; gap: 20px; justify-content: end; margin-right: 30px;}
-.window-content .window-event .event-img p{margin-right: 30px; font-size: 40px; color: rgb(99, 99, 99); margin-top: 100px; text-align: center; font-family: 'Cafe24Shiningstar'; font-size: 50px; }
-.window-content .window-event .bottom-txt{
-    text-align: center; margin-top: 50px; font-size: 25px; margin-bottom: 50px;
+.window-content .window-event h1{color: rgb(36, 36, 148); font-size: 20px; text-align: center;margin-top: 100px;  font-family: 'Cafe24ClassicType-Regular'; position: relative; margin-bottom: 30px;
+	color: #242494; 
+	font-size: 40px; 
+	font-weight: normal; 
+	text-shadow: 2px 1px 18px rgba(32, 70, 158, 0.9) ; 
+	-webkit-text-shadow: 2px 1px 18px rgba(32, 70, 158, 0.9) ; 
+	-moz-text-shadow: 2px 1px 18px rgba(32, 70, 158, 0.9) ; 
 }
-.window-content .window-event .bottom-txt p{font-family: 'Cafe24Shiningstar';}
+.window-content .window-event .event-txt h1::after{
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 200px;
+    background-color: rgb(36, 36, 148);
+    top: 160%;
+    left: 50%;
+}
+.window-content .window-event .event-img{margin-top: 100px;margin-left: 30px;  margin-right: 30px; text-align: center;}
+.window-content .com img{margin-top: 200px;}
+.window-content .window-event .bottom-txt{
+    text-align: center; margin-top: 50px; font-size: 20px; margin-bottom: 200px;
+}
+.window-content .window-event .bottom-txt p{
+    font-family: 'NeoDunggeunmo'; margin-bottom: 10px;
+}
+
 
 .last-content{width: 100%; background-color: #dae6ed; margin-top: 70px;}
 .last-content .last-txt{text-align: center; padding: 30px; }
@@ -199,16 +234,19 @@ a{text-decoration: none; color: #000;}
 /* skill 부분 */
 .skill{width: 100%;}
 .skill .skill-wrap{max-width: 1200px; margin: 0 auto;}
-.skill .skill-title{margin-top: 200px;text-align: center; font-size: 20px; margin-bottom: 50px;}
+.skill .skill-title{margin-top: 200px;text-align: center; font-size: 20px; margin-bottom: 100px;}
+.skill .skill-title h1{font-family: 'NeoDunggeunmo'; font-size: 50px; }
 .skill .progress-area{width: 1000px; margin: 0 auto;}
 .skill .progress-area .progress{margin-bottom: 20px;}
 .skill .progress-area .progress p{
+    font-family: 'NeoDunggeunmo'; 
     margin-bottom: 0.5em;
+    font-size: 20px;
 }
 
 .skill .progress-area .progressbar-text{
-    left: 98% !important;
-    top: 20% !important;
+    left: 103% !important;
+    top: 72% !important;
 }
 
 
