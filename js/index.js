@@ -1,6 +1,8 @@
 $(document).ready(function(){
 
 
+
+
     AOS.init()
 
 
@@ -89,7 +91,7 @@ $(document).ready(function(){
         let bar = new ProgressBar.Line(id,{
             strokeWidth :3,
             trailWidth: 3,
-            color: "#e1e1e1",
+            color: "#cbeaff",
             duration: 5000,
             step: function(state,circle){
                 circle.setText(Math.round(circle.value()*100)+"%")
@@ -122,6 +124,26 @@ $(".work .work-menu ul li").click(function(){
     $(".work .work-menu ul li").removeClass("on").eq(i).addClass("on")
 })
 
+
+"use strict";
+const content = "안녕하세요. 신입 웹디자이너 손혜지입니다."
+const text = document.querySelector(".text")
+let index = 0;
+
+function sleep(delay){ 
+    const start = new Date().getTime(); 
+    while (new Date().getTime() < start + delay); 
+    }
+
+function typing(){
+    text.textContent += content[index++];
+    if(index > content.length){
+        text.textContent = ""
+        index = 0;
+        sleep(3000);
+    }
+}
+setInterval(typing, 200)
 
 
 
