@@ -25,14 +25,22 @@ $(document).ready(function(){
 
         $(".window").slideDown();
         $(".window-content").slideDown();
-        $(".window-content .window-close").show();
+        $(" .window-close").show();
     })
 
     $(".window").click(function(){
         $(".window").slideUp();
         $(".window-content").slideUp();
-        $(".window-content .window-close").hide();
+        $(".window-close").hide();
     })
+    $(".window-close").click(function(){
+        $(".window").slideUp();
+        $(".window-content").slideUp();
+        $(".window-close").hide();
+    })
+
+
+
 
     $(".nav .btn").click(function(){
         
