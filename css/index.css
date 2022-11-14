@@ -312,9 +312,8 @@ width: 2px; height: 20px; background-color: #aaa; right: -13px;}
 .work .work-menu ul li a{color: #ffffff; font-family: 'Cafe24ClassicType-Regular'; font-size: 25px; font-weight: 200; padding-bottom: 600px; }
 
 /* work-all 버튼설정 */
-.work .work-all .link-box ul{  gap: 5px; margin-top: 20px; margin-bottom: 50px;  flex-wrap: wrap; justify-content: center; }
+.work .work-all .link-box ul{margin-top: 20px; margin-bottom: 50px; }
 .work .work-all .link-box ul li {cursor: pointer; display:block;  font-weight: 500; font-weight: 50%; margin-bottom: 20px; border: 3px solid rgba(97, 168, 223, 0.25); border-radius: 30px; padding: 5px;}
-.work .work-all .link-box ul li:last-child{width: 100%;}
 .work .work-all .link-box ul li:hover{
     box-shadow: 0 80px 0 0  rgba(171, 213, 246, 0.25) inset, 
     0 -80px 0 0 rgba(164, 202, 231, 0.25) inset;}
